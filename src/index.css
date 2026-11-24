@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-gold: #D4AF70;
+    --color-gold-light: #F3E0B5;
+    --color-gold-dark: #A47C3B;
+    --color-ivory: #F8F5EF;
+    --color-beige: #E8DDC9;
+    --color-obsidian: #080808;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #080808;
+    color: #F8F5EF;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-brand {
+    font-family: 'Cinzel', 'Cormorant Garamond', serif;
+  }
+
+  [dir="rtl"], [lang="ar"] {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] .font-serif-luxury {
+    font-family: 'Amiri', serif;
+  }
+}
+
+/* Custom gold text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF1D0 0%, #D4AF70 50%, #A47C3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-subtle {
+  background: linear-gradient(135deg, #F8F5EF 0%, #E8DDC9 60%, #D4AF70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gold border gradient */
+.border-gold-gradient {
+  border-image: linear-gradient(to right, rgba(212, 175, 112, 0.4), rgba(212, 175, 112, 0.8), rgba(212, 175, 112, 0.4)) 1;
+}
+
+/* Luxury card gold aura */
+.luxury-card-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.luxury-card-hover:hover {
+  box-shadow: 0 16px 40px -12px rgba(212, 175, 112, 0.18);
+  border-color: rgba(212, 175, 112, 0.5);
+}
+
+/* Shimmer metallic reflection */
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 65%
+  );
+  transform: rotate(30deg) translateY(-100%);
+  transition: transform 0.8s ease-in-out;
+}
+.shimmer-effect:hover::after {
+  transform: rotate(30deg) translateY(100%);
+}
+
+/* Subtle luxury grain texture backdrop */
+.bg-noise {
+  background-image: radial-gradient(rgba(212, 175, 112, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a261f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF70;
+}

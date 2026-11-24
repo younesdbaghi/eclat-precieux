@@ -1,0 +1,8 @@
+{
+  "name": "Éclat Précieux — Haute Joaillerie & Bijoux d'Exception",
+  "description": "Maison de haute joaillerie et bijouterie de luxe. Découvrez des créations d'exception en or 18 carats et diamants au Maroc.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
